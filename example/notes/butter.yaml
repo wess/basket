@@ -1,0 +1,12 @@
+window:
+  title: "Notes"
+  width: 1100
+  height: 720
+
+build:
+  entry: src/app/index.html
+  host: src/host/index.ts
+
+bundle:
+  identifier: io.wess.basket.notes
+  category: public.app-category.productivity

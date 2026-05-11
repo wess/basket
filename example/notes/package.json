@@ -1,0 +1,23 @@
+{
+  "name": "notes",
+  "module": "src/host/index.ts",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "butter": "npm:butterframework@latest",
+    "@basket/config": "workspace:*",
+    "@basket/db": "workspace:*",
+    "@basket/ipc": "workspace:*",
+    "@basket/menu": "workspace:*",
+    "@basket/store": "workspace:*",
+    "@basket/window": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "scripts": {
+    "dev": "butter dev",
+    "build": "butter compile",
+    "bundle": "butter bundle"
+  }
+}

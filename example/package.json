@@ -1,0 +1,6 @@
+{
+  "name": "@basket/example",
+  "private": true,
+  "type": "module",
+  "workspaces": ["notes"]
+}

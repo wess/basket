@@ -1,0 +1,38 @@
+{
+  "name": "basket",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "example"
+  ],
+  "scripts": {
+    "test": "bun test",
+    "lint": "bunx biome lint packages/",
+    "format": "bunx biome format packages/",
+    "check": "bunx biome check packages/",
+    "lint:fix": "bunx biome lint --write packages/",
+    "format:fix": "bunx biome format --write packages/",
+    "check:fix": "bunx biome check --write packages/",
+    "tidy": "bun run format:fix && bun run lint:fix"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.10",
+    "@types/bun": "latest",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "butter": "npm:butterframework@latest",
+    "lucide-react": "^0.460.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@basket/migrate": "workspace:*",
+    "@basket/request": "workspace:*",
+    "@basket/auth": "workspace:*",
+    "@basket/ui": "workspace:*"
+  }
+}
