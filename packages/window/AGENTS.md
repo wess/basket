@@ -99,6 +99,33 @@ strategy: save on shutdown via the `lifecycle` plugin's `before-quit`
 event. For high fidelity, snapshot on a `setInterval` or after specific
 user actions (toggling fullscreen, opening DevTools, etc.).
 
+## Translucent windows (vibrancy / mica / acrylic)
+
+Butter exposes a `material` window option that applies an
+`NSVisualEffectView` on macOS and the DWM system backdrop on Windows
+11+. The webview is set transparent so the material shows through —
+make sure your app's CSS doesn't paint an opaque `body { background }`.
+
+```yaml
+# butter.yaml — main window
+window:
+  material: vibrancy   # vibrancy | mica | acrylic | tabbed | none
+```
+
+```ts
+// Secondary windows pass it through openWindow defaults:
+import { openWindow } from "@basket/window"
+
+const palette = openWindow({
+  url: "/palette.html",
+  defaults: { width: 720, height: 480, frameless: true, material: "vibrancy" },
+})
+```
+
+`material` is fixed at window creation — you can't toggle it at
+runtime through `setWindow()`. Linux has no equivalent; the option is
+a no-op there.
+
 ## Depends on
 
 - `butter` (peer) — for `setWindow`, `createWindow`, etc.

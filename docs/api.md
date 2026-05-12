@@ -115,6 +115,55 @@ onAnyProtocol((link) => …)
 onBeforeQuit(fn) | onWillQuit(fn) | onActivate(fn) | onReopen(fn)
 ```
 
+### @basket/singleton
+
+```ts
+onSecondInstance((info) => …)            // info: { argv, cwd }
+isLeader()                                // → true (in host code)
+```
+
+Requires `singleinstance` in `butter.yaml#plugins`.
+
+### @basket/autolaunch
+
+```ts
+enable({ appId, displayName?, args?, exePath? })   // → void
+disable(appId)                                      // → void
+isEnabled(appId)                                    // → boolean
+```
+
+No butter plugin required — reimplements platform plumbing directly
+(launchd plist on macOS, `.desktop` on Linux, HKCU Run on Windows).
+
+### @basket/power
+
+```ts
+onSleep(fn) | onWake(fn) | onScreenSleep(fn) | onScreenWake(fn)
+onLock(fn)  | onUnlock(fn)
+
+idleSeconds()                            // → number   seconds since last input
+listScreens()                            // → Screen[] { id, primary, scale, bounds, workArea }
+```
+
+Requires `power` in `butter.yaml#plugins`. Lock/unlock and idle/screen
+queries are macOS-only at the shim layer today.
+
+### @basket/sidecar
+
+```ts
+spawn(name, { args?, cwd?, env? })       // → Sidecar
+listSidecars()                            // → string[]
+
+// Sidecar:
+//   pid, write(text), kill(signal?), exited: Promise<number | null>
+//   onStdout(fn) → unsubscribe
+//   onStderr(fn) → unsubscribe
+```
+
+Sidecars are declared in `butter.yaml#bundle.sidecars` and addressed by
+basename. Resolves via `BUTTER_SIDECARS` (dev) or `BUTTER_SIDECARS_DIR`
+(compiled bundle).
+
 ### @basket/theme
 
 ```ts

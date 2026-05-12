@@ -31,6 +31,10 @@ If you are an AI session new to this codebase, start with [SOUL.md](SOUL.md) —
 - [packages/shortcut/AGENTS.md](packages/shortcut/AGENTS.md): global keyboard shortcuts (`registerShortcut`)
 - [packages/protocol/AGENTS.md](packages/protocol/AGENTS.md): custom URL scheme / deep links (`onProtocol`, `parseDeepLink`)
 - [packages/lifecycle/AGENTS.md](packages/lifecycle/AGENTS.md): app lifecycle hooks (`onBeforeQuit`, `onActivate`, …)
+- [packages/singleton/AGENTS.md](packages/singleton/AGENTS.md): single-instance enforcement (`onSecondInstance`, `isLeader`)
+- [packages/autolaunch/AGENTS.md](packages/autolaunch/AGENTS.md): register the app to launch at login (`enable`, `disable`, `isEnabled`)
+- [packages/power/AGENTS.md](packages/power/AGENTS.md): power/screen/lock/idle events + display enumeration (`onSleep`, `onLock`, `idleSeconds`, `listScreens`)
+- [packages/sidecar/AGENTS.md](packages/sidecar/AGENTS.md): spawn bundled external executables (`spawn`, `listSidecars`)
 - [packages/theme/AGENTS.md](packages/theme/AGENTS.md): system theme detection + app manager (`createThemeManager`)
 
 ### Data
