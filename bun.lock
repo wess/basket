@@ -29,28 +29,35 @@
     },
     "packages/ai": {
       "name": "@basket/ai",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "typescript": "^5",
       },
     },
     "packages/auth": {
       "name": "@basket/auth",
-      "version": "0.0.1",
+      "version": "0.0.2",
+      "peerDependencies": {
+        "typescript": "^5",
+      },
+    },
+    "packages/autolaunch": {
+      "name": "@basket/autolaunch",
+      "version": "0.0.2",
       "peerDependencies": {
         "typescript": "^5",
       },
     },
     "packages/cache": {
       "name": "@basket/cache",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "typescript": "^5",
       },
     },
     "packages/cli": {
       "name": "@basket/cli",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "bin": {
         "basket": "./entry.ts",
       },
@@ -60,21 +67,21 @@
     },
     "packages/config": {
       "name": "@basket/config",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "typescript": "^5",
       },
     },
     "packages/db": {
       "name": "@basket/db",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "typescript": "^5",
       },
     },
     "packages/dialog": {
       "name": "@basket/dialog",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "butter": "*",
         "typescript": "^5",
@@ -82,14 +89,14 @@
     },
     "packages/fs": {
       "name": "@basket/fs",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "typescript": "^5",
       },
     },
     "packages/ipc": {
       "name": "@basket/ipc",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "butter": "*",
         "typescript": "^5",
@@ -97,7 +104,7 @@
     },
     "packages/lifecycle": {
       "name": "@basket/lifecycle",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "butter": "*",
         "typescript": "^5",
@@ -105,14 +112,14 @@
     },
     "packages/logger": {
       "name": "@basket/logger",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "typescript": "^5",
       },
     },
     "packages/mcp": {
       "name": "@basket/mcp",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "dependencies": {
         "@modelcontextprotocol/sdk": "^1.29.0",
       },
@@ -122,7 +129,7 @@
     },
     "packages/menu": {
       "name": "@basket/menu",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "butter": "*",
         "typescript": "^5",
@@ -130,21 +137,29 @@
     },
     "packages/migrate": {
       "name": "@basket/migrate",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "typescript": "^5",
       },
     },
     "packages/notify": {
       "name": "@basket/notify",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
+        "typescript": "^5",
+      },
+    },
+    "packages/power": {
+      "name": "@basket/power",
+      "version": "0.0.2",
+      "peerDependencies": {
+        "butter": "*",
         "typescript": "^5",
       },
     },
     "packages/protocol": {
       "name": "@basket/protocol",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "butter": "*",
         "typescript": "^5",
@@ -152,21 +167,36 @@
     },
     "packages/request": {
       "name": "@basket/request",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "typescript": "^5",
       },
     },
     "packages/secrets": {
       "name": "@basket/secrets",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "typescript": "^5",
       },
     },
     "packages/shortcut": {
       "name": "@basket/shortcut",
-      "version": "0.0.1",
+      "version": "0.0.2",
+      "peerDependencies": {
+        "butter": "*",
+        "typescript": "^5",
+      },
+    },
+    "packages/sidecar": {
+      "name": "@basket/sidecar",
+      "version": "0.0.2",
+      "peerDependencies": {
+        "typescript": "^5",
+      },
+    },
+    "packages/singleton": {
+      "name": "@basket/singleton",
+      "version": "0.0.2",
       "peerDependencies": {
         "butter": "*",
         "typescript": "^5",
@@ -174,14 +204,14 @@
     },
     "packages/store": {
       "name": "@basket/store",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "typescript": "^5",
       },
     },
     "packages/theme": {
       "name": "@basket/theme",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "butter": "*",
         "typescript": "^5",
@@ -189,7 +219,7 @@
     },
     "packages/tray": {
       "name": "@basket/tray",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "butter": "*",
         "typescript": "^5",
@@ -197,7 +227,7 @@
     },
     "packages/ui": {
       "name": "@basket/ui",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "lucide-react": "^0.460.0",
         "react": "^19.0.0",
@@ -207,14 +237,14 @@
     },
     "packages/update": {
       "name": "@basket/update",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "typescript": "^5",
       },
     },
     "packages/window": {
       "name": "@basket/window",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "peerDependencies": {
         "butter": "*",
         "typescript": "^5",
@@ -225,6 +255,8 @@
     "@basket/ai": ["@basket/ai@workspace:packages/ai"],
 
     "@basket/auth": ["@basket/auth@workspace:packages/auth"],
+
+    "@basket/autolaunch": ["@basket/autolaunch@workspace:packages/autolaunch"],
 
     "@basket/cache": ["@basket/cache@workspace:packages/cache"],
 
@@ -254,6 +286,8 @@
 
     "@basket/notify": ["@basket/notify@workspace:packages/notify"],
 
+    "@basket/power": ["@basket/power@workspace:packages/power"],
+
     "@basket/protocol": ["@basket/protocol@workspace:packages/protocol"],
 
     "@basket/request": ["@basket/request@workspace:packages/request"],
@@ -261,6 +295,10 @@
     "@basket/secrets": ["@basket/secrets@workspace:packages/secrets"],
 
     "@basket/shortcut": ["@basket/shortcut@workspace:packages/shortcut"],
+
+    "@basket/sidecar": ["@basket/sidecar@workspace:packages/sidecar"],
+
+    "@basket/singleton": ["@basket/singleton@workspace:packages/singleton"],
 
     "@basket/store": ["@basket/store@workspace:packages/store"],
 

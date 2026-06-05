@@ -39,7 +39,7 @@ ${argLines}
 `;
 };
 
-const linuxDesktop = (id: string, name: string, exe: string, args: readonly string[]): string => {
+const linuxDesktop = (name: string, exe: string, args: readonly string[]): string => {
   const cmd = [exe, ...args].map((a) => (a.includes(" ") ? `"${a}"` : a)).join(" ");
   return `[Desktop Entry]
 Type=Application
@@ -68,7 +68,7 @@ export const enable = async (opts: AutoLaunchOptions): Promise<void> => {
 
   if (process.platform === "linux") {
     mkdirSync(join(homedir(), ".config", "autostart"), { recursive: true });
-    writeFileSync(linuxDesktopPath(opts.appId), linuxDesktop(opts.appId, opts.displayName ?? opts.appId, exe, args));
+    writeFileSync(linuxDesktopPath(opts.appId), linuxDesktop(opts.displayName ?? opts.appId, exe, args));
     return;
   }
 
@@ -112,7 +112,9 @@ export const isEnabled = async (appId: string): Promise<boolean> => {
   if (process.platform === "darwin") return existsSync(macPlistPath(appId));
   if (process.platform === "linux") return existsSync(linuxDesktopPath(appId));
   if (process.platform === "win32") {
-    const out = await Bun.$`reg query HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run /v ${appId}`.quiet().nothrow();
+    const out = await Bun.$`reg query HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run /v ${appId}`
+      .quiet()
+      .nothrow();
     return out.exitCode === 0 && out.stdout.toString().includes(appId);
   }
   return false;

@@ -23,7 +23,7 @@
 - **Tiny binaries.** ~3-8 MB, not ~150 MB. Native webview, not bundled Chromium.
 - **One language.** TypeScript on the host (Bun) *and* in the webview. No Rust, no Go.
 - **Functional.** No classes, immutable inputs, composition over inheritance. Same conventions as atlas.
-- **Composable.** 25 small packages. Use one, use them all — they snap together.
+- **Composable.** 29 small packages. Use one, use them all — they snap together.
 - **AI-friendly.** Every package ships an `AGENTS.md` ≤ 200 lines with types, exports, and a working example.
 - **No npm tax.** Vendor as a workspace, edit in place, no version skew.
 

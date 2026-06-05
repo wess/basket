@@ -77,20 +77,16 @@ export const onLock = (handler: Handler) => subscribe("lock", "power:lock", grou
 export const onUnlock = (handler: Handler) => subscribe("unlock", "power:unlock", groups.unlock, handler);
 
 export const idleSeconds = async (): Promise<number> => {
-  const r = (await getRuntime().control("power:idle")) as
-    | { ok?: boolean; seconds?: number }
-    | undefined;
-  if (!r || !r.ok || typeof r.seconds !== "number") {
+  const r = (await getRuntime().control("power:idle")) as { ok?: boolean; seconds?: number } | undefined;
+  if (!r?.ok || typeof r.seconds !== "number") {
     throw new Error("power: idle query failed (is the shim running?)");
   }
   return r.seconds;
 };
 
 export const listScreens = async (): Promise<readonly Screen[]> => {
-  const r = (await getRuntime().control("screen:list")) as
-    | { ok?: boolean; screens?: Screen[] }
-    | undefined;
-  if (!r || !r.ok || !Array.isArray(r.screens)) {
+  const r = (await getRuntime().control("screen:list")) as { ok?: boolean; screens?: Screen[] } | undefined;
+  if (!r?.ok || !Array.isArray(r.screens)) {
     throw new Error("power: screen list query failed (is the shim running?)");
   }
   return r.screens;
