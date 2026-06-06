@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Basket — functional Bun/TypeScript building blocks for desktop apps</title>
+    <meta
+      name="description"
+      content="Basket is a set of 29 composable, functional Bun/TypeScript packages for building native desktop apps on butter. Tiny binaries, one language, end-to-end typed IPC. What atlas is to web apps, basket is to desktop."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>:root{--accent:#f59e0b;--accent2:#ec4899}</style>
+  </head>
+  <body>
+    <!-- nav -->
+    <nav class="nav">
+      <div class="wrap">
+        <a class="brand" href="index.html"><span class="mark">🧺</span> Basket</a>
+        <button class="navtoggle" aria-label="Menu" data-nav>☰</button>
+        <div class="navlinks" data-navlinks>
+          <a href="#features">Features</a>
+          <a href="#packages">Packages</a>
+          <a href="#start">Quick start</a>
+          <a href="docs.html">Docs</a>
+          <a class="btn primary" href="https://github.com/wess/basket">GitHub</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero -->
+    <header class="hero">
+      <div class="wrap">
+        <span class="pill"><span class="dot"></span> Built on butter · 29 packages · Bun + TypeScript</span>
+        <h1>Functional building blocks for <span class="accent">native desktop apps</span>.</h1>
+        <p class="lead">
+          What <a href="https://github.com/wess/atlas">atlas</a> is to web apps, basket is to desktop. Composable,
+          functional Bun/TypeScript packages that snap together — typed IPC, windows, menus, sqlite, auth, AI — on a
+          native webview. Tiny binaries, one language, no Rust.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#start">Get started</a>
+          <a class="btn ghost" href="https://github.com/wess/basket">View on GitHub →</a>
+        </div>
+
+        <!-- code mockup -->
+        <div class="mock">
+          <div class="bar">
+            <span class="hash">#</span><span>src/shared/channels.ts</span>
+            <span class="muted" style="font-size: 13px">· shared between host and webview</span>
+            <span class="dots"><i></i><i></i><i></i></span>
+          </div>
+          <div class="body">
+            <div class="msg">
+              <div class="av" style="background: linear-gradient(135deg, #f59e0b, #b45309)">📡</div>
+              <div>
+                <div class="who">@basket/ipc <small>typed channels</small></div>
+                <div class="txt">
+                  <code>defineChannel&lt;void, Note[]&gt;("notes:list")</code> — one contract, host and webview both type-check.
+                </div>
+              </div>
+            </div>
+            <div class="msg">
+              <div class="av" style="background: linear-gradient(135deg, #ec4899, #9d174d)">🗄️</div>
+              <div>
+                <div class="who">@basket/db <small>bun:sqlite</small></div>
+                <div class="txt">A functional query builder, schemas, and basic migrations over <code>bun:sqlite</code>.</div>
+              </div>
+            </div>
+            <div class="msg">
+              <div class="av" style="background: linear-gradient(135deg, #f59e0b, #b45309)">🪟</div>
+              <div>
+                <div class="who">@basket/window <small>persistence</small></div>
+                <div class="txt">Multi-window management with size and position persisted to a local store.</div>
+              </div>
+            </div>
+            <div class="msg human">
+              <div class="av">🧺</div>
+              <div>
+                <div class="who">basket</div>
+                <div class="txt">Rename <code>createNote</code> or change its payload and it's a compile error on both sides.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- features -->
+    <section class="block" id="features">
+      <div class="wrap">
+        <div class="eyebrow">Why basket</div>
+        <h2>The pieces of a desktop app, done functionally.</h2>
+        <p class="sub">Use one package or all 29. They're small, they're typed, and they snap together.</p>
+        <div class="grid">
+          <div class="card">
+            <div class="ico">🪶</div>
+            <h3>Tiny binaries</h3>
+            <p>~3-8 MB, not ~150 MB. A native webview, not a bundled Chromium runtime.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🦋</div>
+            <h3>One language</h3>
+            <p>TypeScript on the host (Bun) and in the webview. No Rust, no Go — just one toolchain.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🧩</div>
+            <h3>Composable</h3>
+            <p>29 small packages. Use one, use them all — they're designed to snap together cleanly.</p>
+          </div>
+          <div class="card">
+            <div class="ico">📡</div>
+            <h3>End-to-end typed IPC</h3>
+            <p>Typed channels, events, pipelines, validation, and structured errors shared host-to-webview.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🗄️</div>
+            <h3>Data layer included</h3>
+            <p>A <code>bun:sqlite</code> query builder, migrations, sandboxed FS, TTL cache, and a rotating logger.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🔐</div>
+            <h3>Auth &amp; secrets</h3>
+            <p>Argon2id + OAuth (PKCE), plus the OS keychain on macOS, libsecret, and Credential Manager.</p>
+          </div>
+          <div class="card">
+            <div class="ico">🤖</div>
+            <h3>AI-friendly</h3>
+            <p>Chat, streaming, and embeddings across OpenAI, Anthropic, and Ollama — plus MCP for app tools.</p>
+          </div>
+          <div class="card">
+            <div class="ico">λ</div>
+            <h3>Functional only</h3>
+            <p>No classes. Immutable inputs, composition over inheritance — the same conventions as atlas.</p>
+          </div>
+          <div class="card">
+            <div class="ico">📦</div>
+            <h3>No npm tax</h3>
+            <p>Vendor it as a workspace, edit in place, no version skew. Each package ships a concise AGENTS.md.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- packages -->
+    <section class="block" id="packages">
+      <div class="wrap">
+        <div class="eyebrow">Packages</div>
+        <h2>29 small packages, grouped by job.</h2>
+        <p class="sub">Each one wraps a butter primitive or a Bun-native API — nothing reinvented.</p>
+        <div class="split">
+          <ul>
+            <li><span class="ck">✦</span><span><b>Core</b> — config, store, ipc, window: the spine of every basket app.</span></li>
+            <li><span class="ck">✦</span><span><b>Native shell</b> — menu, tray, dialog, notify, shortcut, protocol, lifecycle, theme.</span></li>
+            <li><span class="ck">✦</span><span><b>Data</b> — db, migrate, fs, cache, logger over <code>bun:sqlite</code> and the filesystem.</span></li>
+            <li><span class="ck">✦</span><span><b>Network · Auth · AI</b> — request, secrets, auth, update, ai, mcp.</span></li>
+            <li><span class="ck">✦</span><span><b>UI · CLI</b> — React desktop primitives, and the <code>basket</code> CLI: init, dev, build, bundle, add, docs, doctor.</span></li>
+          </ul>
+          <div class="diagram">         webview (TypeScript)
+                 │
+        @basket/ipc  (typed channels)
+                 │
+        host  (Bun · TypeScript)
+                 │
+      ┌──────────┼───────────┐
+   @basket/db  window     menu·tray
+   (bun:sqlite)  store     dialog
+                 │
+            butter (native webview)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- get started -->
+    <section class="block" id="start">
+      <div class="wrap">
+        <div class="eyebrow">Quick start</div>
+        <h2>A native window in three commands.</h2>
+        <p class="sub">Scaffold a project with the CLI, install, and run. ⌘T toggles the theme; ⌘Q quits.</p>
+        <div class="code" style="margin-top: 32px; max-width: 720px">
+          <div class="top">
+            <span>terminal</span>
+            <button class="copy" data-copy>Copy</button>
+          </div>
+          <pre data-code><span class="c"># scaffold a new app (templates: minimal, menubar)</span>
+bunx --bun @basket/cli init myapp --template minimal
+cd myapp
+
+<span class="c"># install + run — a native window opens</span>
+bun install
+bun run dev</pre>
+        </div>
+
+        <p class="sub" style="margin-top: 40px">Or vendor basket into an existing project as a workspace — it isn't on npm.</p>
+        <div class="code" style="margin-top: 16px; max-width: 720px">
+          <div class="top">
+            <span>terminal</span>
+            <button class="copy" data-copy>Copy</button>
+          </div>
+          <pre data-code><span class="c"># vendor as a workspace, then edit in place</span>
+curl -sL https://github.com/wess/basket/archive/refs/heads/main.zip -o /tmp/basket.zip
+unzip -q /tmp/basket.zip -d /tmp/basket-expand
+mv /tmp/basket-expand/basket-main ./basket
+rm -rf /tmp/basket.zip /tmp/basket-expand
+echo "basket/" >> .gitignore
+
+<span class="c"># then add to package.json: "workspaces": ["basket/packages/*"]</span>
+<span class="c"># and "@basket/ipc": "workspace:*", etc.</span></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- cta band -->
+    <section class="band">
+      <div class="wrap">
+        <h2>Build a desktop app the functional way.</h2>
+        <p>Open source under Apache 2.0. Composable Bun/TypeScript packages on a native webview — tiny binaries, one language.</p>
+        <div class="cta">
+          <a class="btn primary" href="docs.html">Read the docs</a>
+          <a class="btn ghost" href="https://github.com/wess/basket">View on GitHub →</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <a class="brand" href="index.html"><span class="mark">🧺</span> Basket</a>
+        <div class="links">
+          <a href="docs.html">Docs</a>
+          <a href="../docs/getting-started.md">Getting started</a>
+          <a href="../docs/api.md">API</a>
+          <a href="https://github.com/wess/basket">GitHub</a>
+          <a href="https://github.com/wess/butter">butter</a>
+          <a href="https://github.com/wess/atlas">atlas</a>
+        </div>
+        <span>Apache 2.0 · © 2026</span>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

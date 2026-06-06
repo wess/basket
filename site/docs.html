@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Documentation — Basket</title>
+    <meta name="description" content="Documentation for Basket: getting started, concepts, IPC, the data layer, auth, AI, UI, distribution, testing, and the full API reference." />
+    <link rel="stylesheet" href="styles.css" />
+    <style>:root{--accent:#f59e0b;--accent2:#ec4899}</style>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="wrap">
+        <a class="brand" href="index.html"><span class="mark">🧺</span> Basket</a>
+        <button class="navtoggle" aria-label="Menu" data-nav>☰</button>
+        <div class="navlinks" data-navlinks>
+          <a href="index.html#features">Features</a>
+          <a href="index.html#packages">Packages</a>
+          <a href="index.html#start">Quick start</a>
+          <a href="docs.html">Docs</a>
+          <a class="btn primary" href="https://github.com/wess/basket">GitHub</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="dochero">
+      <div class="wrap">
+        <div class="eyebrow">Documentation</div>
+        <h2 style="font-size: clamp(28px, 5vw, 40px); font-weight: 800; letter-spacing: -0.02em">Everything about Basket.</h2>
+        <p class="sub">
+          The full reference lives as Markdown in the <code>docs/</code> folder. Start with getting started, then read the
+          concepts and the guides for each layer. Each card links straight to the source document.
+        </p>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="docsection">Get going</div>
+      <div class="docgrid">
+        <a class="doccard" href="../docs/README.md">
+          <div class="t"><span class="ico">📖</span> Docs index</div>
+          <p>The doc map and where to start reading.</p>
+        </a>
+        <a class="doccard" href="../docs/overview.md">
+          <div class="t"><span class="ico">🗺️</span> Overview</div>
+          <p>What basket is and the ideas at a glance.</p>
+        </a>
+        <a class="doccard" href="../docs/getting-started.md">
+          <div class="t"><span class="ico">🚀</span> Getting started</div>
+          <p>Install, scaffold, and run your first native window.</p>
+        </a>
+        <a class="doccard" href="../docs/quickstart.md">
+          <div class="t"><span class="ico">⚡</span> Quickstart</div>
+          <p>An 80-line working app, end to end.</p>
+        </a>
+      </div>
+
+      <div class="docsection">Understand it</div>
+      <div class="docgrid">
+        <a class="doccard" href="../docs/concepts.md">
+          <div class="t"><span class="ico">🧭</span> Concepts</div>
+          <p>Host vs webview, channels, immutability, and platform paths.</p>
+        </a>
+        <a class="doccard" href="../docs/comparisons.md">
+          <div class="t"><span class="ico">⚖️</span> Comparisons</div>
+          <p>How basket stacks up against Electron, Tauri, and atlas.</p>
+        </a>
+        <a class="doccard" href="../docs/cookbook.md">
+          <div class="t"><span class="ico">🍳</span> Cookbook</div>
+          <p>Task-focused recipes for common desktop patterns.</p>
+        </a>
+      </div>
+
+      <div class="docsection">Guides</div>
+      <div class="docgrid">
+        <a class="doccard" href="../docs/ipc.md">
+          <div class="t"><span class="ico">📡</span> IPC</div>
+          <p>Channels, events, pipelines, validation, and structured errors.</p>
+        </a>
+        <a class="doccard" href="../docs/data.md">
+          <div class="t"><span class="ico">🗄️</span> Data</div>
+          <p>db, migrations, cache, fs, and the rotating logger.</p>
+        </a>
+        <a class="doccard" href="../docs/auth.md">
+          <div class="t"><span class="ico">🔐</span> Auth</div>
+          <p>Passwords, OAuth (PKCE), and keychain-backed sessions.</p>
+        </a>
+        <a class="doccard" href="../docs/ai.md">
+          <div class="t"><span class="ico">🤖</span> AI</div>
+          <p>Providers, streaming, embeddings, and MCP.</p>
+        </a>
+        <a class="doccard" href="../docs/ui.md">
+          <div class="t"><span class="ico">🎨</span> UI</div>
+          <p>The <code>@basket/ui</code> React desktop components.</p>
+        </a>
+      </div>
+
+      <div class="docsection">Reference &amp; operations</div>
+      <div class="docgrid">
+        <a class="doccard" href="../docs/api.md">
+          <div class="t"><span class="ico">🔗</span> API reference</div>
+          <p>One-screen cross-package lookup of every export.</p>
+        </a>
+        <a class="doccard" href="../docs/distribution.md">
+          <div class="t"><span class="ico">📦</span> Distribution</div>
+          <p>Build, bundle, sign, and auto-update your app.</p>
+        </a>
+        <a class="doccard" href="../docs/testing.md">
+          <div class="t"><span class="ico">🧪</span> Testing</div>
+          <p>Unit and integration patterns for basket apps.</p>
+        </a>
+        <a class="doccard" href="../docs/troubleshooting.md">
+          <div class="t"><span class="ico">🛠️</span> Troubleshooting</div>
+          <p>Platform quirks and how to work around them.</p>
+        </a>
+        <a class="doccard" href="../docs/faq.md">
+          <div class="t"><span class="ico">❓</span> FAQ</div>
+          <p>Common questions about basket and how it works.</p>
+        </a>
+        <a class="doccard" href="../docs/contributing.md">
+          <div class="t"><span class="ico">🤝</span> Contributing</div>
+          <p>Conventions, layout, and how to add to basket.</p>
+        </a>
+      </div>
+    </main>
+
+    <footer style="margin-top: 60px">
+      <div class="wrap">
+        <a class="brand" href="index.html"><span class="mark">🧺</span> Basket</a>
+        <div class="links">
+          <a href="index.html">Home</a>
+          <a href="../docs/README.md">Docs source</a>
+          <a href="https://github.com/wess/basket">GitHub</a>
+          <a href="https://github.com/wess/butter">butter</a>
+          <a href="https://github.com/wess/atlas">atlas</a>
+        </div>
+        <span>Apache 2.0 · © 2026</span>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
