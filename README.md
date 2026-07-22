@@ -253,3 +253,5 @@ See [docs/getting-started.md](docs/getting-started.md) for the long version.
 ## License
 
 [Apache License 2.0](LICENSE) © 2026 Wess Cope
+
+♥ [Sponsor this project](https://github.com/sponsors/wess)
